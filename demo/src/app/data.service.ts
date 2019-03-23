@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Article } from './article';
 
@@ -17,7 +18,7 @@ export class DataService {
     }
   ];
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   search(articles: Article[], keyword: string): any {
     if (articles) {
@@ -25,5 +26,9 @@ export class DataService {
     }
 
     return [];
+  }
+
+  getArticles() {
+    return this.http.get('http://localhost:4200/assets/api.json');
   }
 }

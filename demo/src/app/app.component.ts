@@ -33,13 +33,15 @@ export class AppComponent implements OnInit {
   articles: Article[];
   originalArticles = this.dataService.articles;
 
-  constructor(private dataService: DataService, private http: HttpClient) {
-
-  }
+  constructor(private dataService: DataService, private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get('http://localhost:4200/assets/api.json').subscribe((data: Article[]) => {
-      // console.log(data);
+    // this.http.get('http://localhost:4200/assets/api.json').subscribe((data: Article[]) => {
+    //   // console.log(data);
+    //   this.articles = data;
+    // });
+
+    this.dataService.getArticles().subscribe((data: Article[]) => {
       this.articles = data;
     });
   }
@@ -67,7 +69,6 @@ export class AppComponent implements OnInit {
     //   .filter(article => article.title.indexOf(keyword) !== -1);
   }
 }
-
 
 // ---- 模擬的 Angular 行為 ----
 

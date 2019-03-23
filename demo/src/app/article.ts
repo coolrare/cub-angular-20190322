@@ -1,13 +1,11 @@
 export interface Article {
+  id: number;
+  href: string;
   title: string;
-  content: string;
+  date: string;
+  author: string;
+  category: string;
+  'category-link': string;
   summary: string;
-  age?: number;
+  age: number;
 }
-
-interface Test { title: string;}
-
-const a: Article = {
-  title: 'tset',
-  content: 'test'
-};
