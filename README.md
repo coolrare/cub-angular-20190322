@@ -120,3 +120,10 @@ https://docs.emmet.io/abbreviations/syntax/
 ## Angular Playground
 
 - https://angularplayground.it/
+
+## 常見的元件庫
+
+- [Angular Material](https://material.angular.io/)
+- [NG-ZORRO](https://ng.ant.design/)
+- [PrimeNG](https://www.primefaces.org/primeng/#/)
+- [2018 Angular 常見 UI 元件庫優劣分析](https://paper.dropbox.com/doc/2018-Angular-UI--AaHaO5We9qbVtXgTKej2eYRDAg-Aqux6NlQXf39u0ax4Nrjo)
